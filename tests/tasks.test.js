@@ -68,6 +68,38 @@ describe('Task Model', () => {
       expect(found).toBeUndefined();
     });
   });
+
+  describe('update()', () => {
+    test('should update task title', () => {
+      const created = TaskModel.create({ title: 'Original Title' });
+      const updated = TaskModel.update(created.id, { title: 'Updated Title' });
+      
+      expect(updated.title).toBe('Updated Title');
+      expect(updated.id).toBe(created.id);
+    });
+
+    test('should update task status', () => {
+      const created = TaskModel.create({ title: 'Task' });
+      const updated = TaskModel.update(created.id, { status: 'completed' });
+      
+      expect(updated.status).toBe('completed');
+    });
+
+    test('should return null for non-existent task', () => {
+      const result = TaskModel.update('non-existent-id', { title: 'New' });
+      expect(result).toBeNull();
+    });
+
+    test('should update updatedAt timestamp', () => {
+      const created = TaskModel.create({ title: 'Task' });
+      
+      // Small delay to ensure different timestamp
+      const updated = TaskModel.update(created.id, { title: 'Changed' });
+      
+      expect(updated.updatedAt).toBeDefined();
+      expect(updated.createdAt).toBe(created.createdAt);
+    });
+  });
 });
 
 describe('Validation', () => {

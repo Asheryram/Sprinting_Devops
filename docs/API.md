@@ -114,6 +114,58 @@ curl -X POST http://localhost:3000/api/tasks \
 
 ---
 
+### Update Task
+
+Update an existing task.
+
+**Endpoint:** `PUT /api/tasks/:id`
+
+**Request Body:**
+```json
+{
+  "title": "string (optional)",
+  "description": "string (optional)",
+  "status": "pending | in-progress | completed (optional)"
+}
+```
+
+**Success Response (200 OK):**
+```json
+{
+  "id": "uuid",
+  "title": "Updated title",
+  "description": "Updated description",
+  "status": "in-progress",
+  "createdAt": "2026-02-15T10:30:00.000Z",
+  "updatedAt": "2026-02-15T11:00:00.000Z"
+}
+```
+
+**Error Response (404 Not Found):**
+```json
+{
+  "error": "Task not found",
+  "id": "requested-id"
+}
+```
+
+**Error Response (400 Bad Request):**
+```json
+{
+  "error": "Invalid status",
+  "validStatuses": ["pending", "in-progress", "completed"]
+}
+```
+
+**Example:**
+```bash
+curl -X PUT http://localhost:3000/api/tasks/uuid-here \
+  -H "Content-Type: application/json" \
+  -d '{"status": "completed"}'
+```
+
+---
+
 ## Health
 
 ### Health Check

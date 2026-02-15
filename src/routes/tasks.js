@@ -64,4 +64,35 @@ router.post('/', (req, res) => {
   res.status(201).json(task);
 });
 
+/**
+ * PUT /api/tasks/:id
+ * Update a task
+ */
+router.put('/:id', (req, res) => {
+  const { id } = req.params;
+  const { title, description, status } = req.body;
+  
+  // Check if task exists
+  const existingTask = TaskModel.getById(id);
+  if (!existingTask) {
+    return res.status(404).json({
+      error: 'Task not found',
+      id: id
+    });
+  }
+  
+  // Validate status if provided
+  const validStatuses = ['pending', 'in-progress', 'completed'];
+  if (status && !validStatuses.includes(status)) {
+    return res.status(400).json({
+      error: 'Invalid status',
+      validStatuses: validStatuses
+    });
+  }
+  
+  const updatedTask = TaskModel.update(id, { title, description, status });
+  
+  res.json(updatedTask);
+});
+
 module.exports = router;
