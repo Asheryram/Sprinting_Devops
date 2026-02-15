@@ -114,6 +114,31 @@ curl -X POST http://localhost:3000/api/tasks \
 
 ---
 
+## Health
+
+### Health Check
+
+Check the API health status.
+
+**Endpoint:** `GET /api/health`
+
+**Success Response (200 OK):**
+```json
+{
+  "status": "healthy",
+  "timestamp": "2026-02-15T10:30:00.000Z",
+  "uptime": "3600 seconds",
+  "version": "1.0.0"
+}
+```
+
+**Example:**
+```bash
+curl http://localhost:3000/api/health
+```
+
+---
+
 ## Status Codes
 
 | Code | Description |
