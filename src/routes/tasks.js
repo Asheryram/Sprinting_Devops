@@ -95,4 +95,28 @@ router.put('/:id', (req, res) => {
   res.json(updatedTask);
 });
 
+/**
+ * DELETE /api/tasks/:id
+ * Delete a task
+ */
+router.delete('/:id', (req, res) => {
+  const { id } = req.params;
+  
+  // Check if task exists
+  const existingTask = TaskModel.getById(id);
+  if (!existingTask) {
+    return res.status(404).json({
+      error: 'Task not found',
+      id: id
+    });
+  }
+  
+  TaskModel.delete(id);
+  
+  res.json({
+    message: 'Task deleted successfully',
+    id: id
+  });
+});
+
 module.exports = router;

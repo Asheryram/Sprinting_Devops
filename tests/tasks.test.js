@@ -100,6 +100,31 @@ describe('Task Model', () => {
       expect(updated.createdAt).toBe(created.createdAt);
     });
   });
+
+  describe('delete()', () => {
+    test('should delete an existing task', () => {
+      const created = TaskModel.create({ title: 'Delete Me' });
+      const result = TaskModel.delete(created.id);
+      
+      expect(result).toBe(true);
+      expect(TaskModel.getById(created.id)).toBeUndefined();
+    });
+
+    test('should return false for non-existent task', () => {
+      const result = TaskModel.delete('non-existent-id');
+      expect(result).toBe(false);
+    });
+
+    test('should not affect other tasks when deleting', () => {
+      const task1 = TaskModel.create({ title: 'Task 1' });
+      const task2 = TaskModel.create({ title: 'Task 2' });
+      
+      TaskModel.delete(task1.id);
+      
+      expect(TaskModel.getById(task2.id)).toBeDefined();
+      expect(TaskModel.getAll()).toHaveLength(1);
+    });
+  });
 });
 
 describe('Validation', () => {
