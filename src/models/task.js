@@ -32,6 +32,26 @@ const TaskModel = {
     return task;
   },
 
+  // Update a task
+  update: (id, data) => {
+    const taskIndex = tasks.findIndex(task => task.id === id);
+    if (taskIndex === -1) {
+      return null;
+    }
+    
+    const existingTask = tasks[taskIndex];
+    const updatedTask = {
+      ...existingTask,
+      title: data.title !== undefined ? data.title : existingTask.title,
+      description: data.description !== undefined ? data.description : existingTask.description,
+      status: data.status !== undefined ? data.status : existingTask.status,
+      updatedAt: new Date().toISOString()
+    };
+    
+    tasks[taskIndex] = updatedTask;
+    return updatedTask;
+  },
+
   // Clear all tasks (for testing)
   clearAll: () => {
     tasks.length = 0;
