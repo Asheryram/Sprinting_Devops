@@ -10,18 +10,28 @@ const validation = {
   validateCreateTask: (data) => {
     const errors = [];
 
+    // Check if title exists
     if (!data.title) {
       errors.push('Title is required');
     } else if (typeof data.title !== 'string') {
       errors.push('Title must be a string');
-    } else if (data.title.trim().length === 0) {
-      errors.push('Title cannot be empty');
-    } else if (data.title.length > 200) {
-      errors.push('Title must be less than 200 characters');
+    } else {
+      // Trim and check for empty
+      const trimmedTitle = data.title.trim();
+      if (trimmedTitle.length === 0) {
+        errors.push('Title cannot be empty');
+      } else if (trimmedTitle.length > 200) {
+        errors.push('Title must be less than 200 characters');
+      }
     }
 
-    if (data.description && typeof data.description !== 'string') {
-      errors.push('Description must be a string');
+    // Validate description if provided
+    if (data.description !== undefined && data.description !== null) {
+      if (typeof data.description !== 'string') {
+        errors.push('Description must be a string');
+      } else if (data.description.length > 1000) {
+        errors.push('Description must be less than 1000 characters');
+      }
     }
 
     return {
