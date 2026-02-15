@@ -4,6 +4,18 @@ const TaskModel = require('../models/task');
 const validation = require('../utils/validation');
 
 /**
+ * GET /api/tasks
+ * Get all tasks
+ */
+router.get('/', (req, res) => {
+  const tasks = TaskModel.getAll();
+  res.json({
+    count: tasks.length,
+    tasks: tasks
+  });
+});
+
+/**
  * POST /api/tasks
  * Create a new task
  */
