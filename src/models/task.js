@@ -52,6 +52,17 @@ const TaskModel = {
     return updatedTask;
   },
 
+  // Delete a task
+  delete: (id) => {
+    const taskIndex = tasks.findIndex(task => task.id === id);
+    if (taskIndex === -1) {
+      return false;
+    }
+    
+    tasks.splice(taskIndex, 1);
+    return true;
+  },
+
   // Clear all tasks (for testing)
   clearAll: () => {
     tasks.length = 0;
