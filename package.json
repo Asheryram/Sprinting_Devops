@@ -1,0 +1,19 @@
+{
+  "name": "task-manager-api",
+  "version": "1.0.0",
+  "description": "A lightweight Task Management API with web frontend",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "node src/app.js",
+    "test": "echo \"No tests yet\" && exit 0"
+  },
+  "keywords": [
+    "task",
+    "manager",
+    "api",
+    "express"
+  ],
+  "author": "Agile DevOps Student",
+  "license": "MIT"
+}
