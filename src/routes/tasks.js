@@ -4,6 +4,45 @@ const TaskModel = require('../models/task');
 const validation = require('../utils/validation');
 
 /**
+ * GET /api/tasks
+ * Get all tasks
+ */
+router.get('/', (req, res) => {
+  const tasks = TaskModel.getAll();
+  
+  if (tasks.length === 0) {
+    return res.json({
+      count: 0,
+      tasks: [],
+      message: 'No tasks found. Create your first task!'
+    });
+  }
+  
+  res.json({
+    count: tasks.length,
+    tasks: tasks
+  });
+});
+
+/**
+ * GET /api/tasks/:id
+ * Get a single task by ID
+ */
+router.get('/:id', (req, res) => {
+  const { id } = req.params;
+  const task = TaskModel.getById(id);
+  
+  if (!task) {
+    return res.status(404).json({
+      error: 'Task not found',
+      id: id
+    });
+  }
+  
+  res.json(task);
+});
+
+/**
  * POST /api/tasks
  * Create a new task
  */

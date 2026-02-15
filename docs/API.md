@@ -9,6 +9,68 @@ http://localhost:3000/api
 
 ## Tasks
 
+### Get All Tasks
+
+Retrieve all tasks.
+
+**Endpoint:** `GET /api/tasks`
+
+**Success Response (200 OK):**
+```json
+{
+  "count": 2,
+  "tasks": [
+    {
+      "id": "uuid",
+      "title": "Task 1",
+      "description": "Description",
+      "status": "pending",
+      "createdAt": "2026-02-15T10:30:00.000Z",
+      "updatedAt": "2026-02-15T10:30:00.000Z"
+    }
+  ]
+}
+```
+
+**Empty Response (200 OK):**
+```json
+{
+  "count": 0,
+  "tasks": [],
+  "message": "No tasks found. Create your first task!"
+}
+```
+
+---
+
+### Get Task by ID
+
+Retrieve a single task by its ID.
+
+**Endpoint:** `GET /api/tasks/:id`
+
+**Success Response (200 OK):**
+```json
+{
+  "id": "uuid",
+  "title": "Task title",
+  "description": "Task description",
+  "status": "pending",
+  "createdAt": "2026-02-15T10:30:00.000Z",
+  "updatedAt": "2026-02-15T10:30:00.000Z"
+}
+```
+
+**Error Response (404 Not Found):**
+```json
+{
+  "error": "Task not found",
+  "id": "requested-id"
+}
+```
+
+---
+
 ### Create Task
 
 Create a new task.

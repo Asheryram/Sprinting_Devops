@@ -53,6 +53,21 @@ describe('Task Model', () => {
       expect(tasks).toHaveLength(2);
     });
   });
+
+  describe('getById()', () => {
+    test('should return task by ID', () => {
+      const created = TaskModel.create({ title: 'Find Me' });
+      const found = TaskModel.getById(created.id);
+      
+      expect(found).toBeDefined();
+      expect(found.title).toBe('Find Me');
+    });
+
+    test('should return undefined for non-existent ID', () => {
+      const found = TaskModel.getById('non-existent-id');
+      expect(found).toBeUndefined();
+    });
+  });
 });
 
 describe('Validation', () => {
