@@ -84,13 +84,29 @@
 
 ---
 
-## Backlog Summary
+## Backlog Summary (Prioritized & Estimated)
 
-| ID | Title | Priority | Status |
-|----|-------|----------|--------|
-| US1 | Create Task | High | To Do |
-| US2 | View Tasks | High | To Do |
-| US3 | Update Task | Medium | To Do |
-| US4 | Delete Task | Medium | To Do |
-| US5 | Health Check | High | To Do |
-| US6 | Web Interface | Medium | To Do |
+| Priority | ID | Title | Story Points | Sprint | Status |
+|----------|-----|-------|--------------|--------|--------|
+| 1 | US1 | Create Task | 3 | Sprint 1 | To Do |
+| 2 | US2 | View Tasks | 2 | Sprint 1 | To Do |
+| 3 | US5 | Health Check | 1 | Sprint 1 | To Do |
+| 4 | US3 | Update Task | 3 | Sprint 2 | To Do |
+| 5 | US4 | Delete Task | 2 | Sprint 2 | To Do |
+| 6 | US6 | Web Interface | 5 | Sprint 2 | To Do |
+
+### Story Point Reference (Fibonacci Scale)
+- **1 point** - Very simple, few hours of work
+- **2 points** - Simple, less than a day
+- **3 points** - Medium complexity, 1-2 days
+- **5 points** - Complex, multiple days
+- **8 points** - Very complex, needs breakdown
+
+### Sprint Capacity
+- **Sprint 1:** 6 story points (US1 + US2 + US5)
+- **Sprint 2:** 10 story points (US3 + US4 + US6)
+
+### Prioritization Rationale
+1. **US1, US2, US5** prioritized first as they form the MVP (create, view, monitor)
+2. **US3, US4** scheduled for Sprint 2 to complete CRUD operations
+3. **US6** scheduled last as it builds on top of the API
