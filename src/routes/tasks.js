@@ -9,6 +9,15 @@ const validation = require('../utils/validation');
  */
 router.get('/', (req, res) => {
   const tasks = TaskModel.getAll();
+  
+  if (tasks.length === 0) {
+    return res.json({
+      count: 0,
+      tasks: [],
+      message: 'No tasks found. Create your first task!'
+    });
+  }
+  
   res.json({
     count: tasks.length,
     tasks: tasks
