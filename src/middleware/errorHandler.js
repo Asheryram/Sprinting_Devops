@@ -19,6 +19,7 @@ const notFoundHandler = (req, res, next) => {
 };
 
 // Global error handler
+// eslint-disable-next-line no-unused-vars
 const errorHandler = (err, req, res, next) => {
   console.error(`[ERROR] ${new Date().toISOString()} - ${err.message}`);
   
