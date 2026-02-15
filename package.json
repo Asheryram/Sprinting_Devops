@@ -6,7 +6,9 @@
   "scripts": {
     "start": "node src/app.js",
     "dev": "node src/app.js",
-    "test": "echo \"No tests yet\" && exit 0"
+    "test": "jest --coverage",
+    "lint": "eslint src/ tests/",
+    "lint:fix": "eslint src/ tests/ --fix"
   },
   "keywords": [
     "task",
