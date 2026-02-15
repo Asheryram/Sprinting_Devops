@@ -27,3 +27,8 @@ jobs:
       
       - name: Run tests
         run: npm test
+      
+      - name: Verify build
+        run: node src/app.js &
+        env:
+          PORT: 3000
