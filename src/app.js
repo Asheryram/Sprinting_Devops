@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const taskRoutes = require('./routes/tasks');
 const healthRoutes = require('./routes/health');
+const { notFoundHandler, errorHandler } = require('./middleware/errorHandler');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -21,6 +22,10 @@ app.get('/', (req, res) => {
     version: '1.0.0'
   });
 });
+
+// Error handling middleware (must be after routes)
+app.use(notFoundHandler);
+app.use(errorHandler);
 
 // Start server
 app.listen(PORT, () => {
