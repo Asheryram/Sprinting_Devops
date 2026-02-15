@@ -4,8 +4,9 @@
 Complete the Task Management API with update, delete functionality and a web interface, while incorporating improvements from Sprint 1 retrospective.
 
 ## Sprint Duration
-- **Start Date:** February 15, 2026
-- **End Date:** February 15, 2026 (same-day sprint)
+- **Start Date:** Friday, February 20, 2026
+- **End Date:** Thursday, February 26, 2026
+- **Duration:** 1 week
 
 ## Team Capacity
 - 1 Developer

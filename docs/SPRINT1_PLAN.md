@@ -11,10 +11,10 @@ Deliver the core MVP functionality: ability to create and view tasks, plus estab
 | Attribute | Value |
 |-----------|-------|
 | Sprint Number | 1 |
-| Duration | 1 week (simulated) |
+| Duration | 1 week |
 | Total Story Points | 6 |
-| Start Date | February 15, 2026 |
-| End Date | February 21, 2026 |
+| Start Date | Friday, February 13, 2026 |
+| End Date | Thursday, February 19, 2026 |
 
 ---
 
