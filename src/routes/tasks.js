@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const TaskModel = require('../models/task');
+const validation = require('../utils/validation');
 
 /**
  * POST /api/tasks
@@ -9,14 +10,17 @@ const TaskModel = require('../models/task');
 router.post('/', (req, res) => {
   const { title, description } = req.body;
   
-  // Basic validation
-  if (!title) {
+  // Validate input
+  const { isValid, errors } = validation.validateCreateTask({ title, description });
+  
+  if (!isValid) {
     return res.status(400).json({
-      error: 'Title is required'
+      error: 'Validation failed',
+      details: errors
     });
   }
 
-  const task = TaskModel.create({ title, description });
+  const task = TaskModel.create({ title: title.trim(), description });
   
   res.status(201).json(task);
 });
