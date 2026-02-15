@@ -166,6 +166,35 @@ curl -X PUT http://localhost:3000/api/tasks/uuid-here \
 
 ---
 
+### Delete Task
+
+Delete a task permanently.
+
+**Endpoint:** `DELETE /api/tasks/:id`
+
+**Success Response (200 OK):**
+```json
+{
+  "message": "Task deleted successfully",
+  "id": "uuid"
+}
+```
+
+**Error Response (404 Not Found):**
+```json
+{
+  "error": "Task not found",
+  "id": "requested-id"
+}
+```
+
+**Example:**
+```bash
+curl -X DELETE http://localhost:3000/api/tasks/uuid-here
+```
+
+---
+
 ## Health
 
 ### Health Check
