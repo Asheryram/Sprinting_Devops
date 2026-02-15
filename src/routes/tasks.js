@@ -16,6 +16,24 @@ router.get('/', (req, res) => {
 });
 
 /**
+ * GET /api/tasks/:id
+ * Get a single task by ID
+ */
+router.get('/:id', (req, res) => {
+  const { id } = req.params;
+  const task = TaskModel.getById(id);
+  
+  if (!task) {
+    return res.status(404).json({
+      error: 'Task not found',
+      id: id
+    });
+  }
+  
+  res.json(task);
+});
+
+/**
  * POST /api/tasks
  * Create a new task
  */
