@@ -82,4 +82,4 @@ Deliver the core MVP functionality: ability to create and view tasks, plus estab
 |------|------------|
 | Developer (Solo) | 100% |
 
-*Note: This is an individual project, so all work is self-assigned.*
+*Note: This is an individual project, so all work is self-assigned to me myself*
