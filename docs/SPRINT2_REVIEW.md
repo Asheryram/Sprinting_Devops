@@ -20,7 +20,7 @@ Sprint 2 focused on completing the Task Management API with full CRUD functional
 
 ## Completed User Stories
 
-### ✅ US3: Update Task (3 points)
+### US3: Update Task (3 points)
 **Acceptance Criteria Met:**
 - [x] PUT /api/tasks/:id endpoint implemented
 - [x] Can update title, description, and status
@@ -30,7 +30,7 @@ Sprint 2 focused on completing the Task Management API with full CRUD functional
 
 **Demo:** Update task via API or web interface
 
-### ✅ US4: Delete Task (2 points)
+### US4: Delete Task (2 points)
 **Acceptance Criteria Met:**
 - [x] DELETE /api/tasks/:id endpoint implemented
 - [x] Returns success message with deleted task ID
@@ -39,7 +39,7 @@ Sprint 2 focused on completing the Task Management API with full CRUD functional
 
 **Demo:** Delete task via API or web interface
 
-### ✅ US6: Web Interface (5 points)
+### US6: Web Interface (5 points)
 **Acceptance Criteria Met:**
 - [x] HTML page displays all tasks
 - [x] Create tasks via form

@@ -43,10 +43,10 @@ The Definition of Done is a shared understanding of what it means for a user sto
 
 Before marking a story as Done:
 
-1. ✅ All acceptance criteria met
-2. ✅ Code reviewed (self-review minimum)
-3. ✅ Linting passes
-4. ✅ Unit tests written and passing
-5. ✅ CI pipeline green
-6. ✅ Documentation updated
-7. ✅ Merged to main branch
+1. All acceptance criteria met
+2. Code reviewed (self-review minimum)
+3. Linting passes
+4. Unit tests written and passing
+5. CI pipeline green
+6. Documentation updated
+7. Merged to main branch

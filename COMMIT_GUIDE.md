@@ -1,4 +1,4 @@
-# Task Manager API - Commit Guide (60+ Commits)
+# Task Manager API - Commit Guide ( Commits)
 
 ## Project: Task Management API with Frontend
 **Tech Stack:** Node.js (Express) + HTML/CSS/JS Frontend

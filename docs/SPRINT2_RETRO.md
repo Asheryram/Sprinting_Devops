@@ -9,7 +9,7 @@
 
 ---
 
-## What Went Well ✅
+## What Went Well
 
 ### 1. Error Handling Improvements
 - Implemented improvements from Sprint 1 retrospective
@@ -33,7 +33,7 @@
 
 ---
 
-## What Could Be Improved 🔧
+## What Could Be Improved
 
 ### 1. Request Logging
 - Still missing request logging middleware
@@ -91,8 +91,8 @@
 Sprint 2 successfully delivered all planned features. The improvements from Sprint 1 retrospective were implemented, particularly the error handling enhancements. The web interface provides a user-friendly way to interact with the API, completing the MVP scope.
 
 ### Key Achievements:
-- ✅ Full CRUD API complete
-- ✅ Web interface functional
-- ✅ 90%+ test coverage maintained
-- ✅ CI/CD pipeline reliable
-- ✅ 67+ commits demonstrating incremental delivery
+- Full CRUD API complete
+- Web interface functional
+- 90%+ test coverage maintained
+- CI/CD pipeline reliable
+- 67+ commits demonstrating incremental delivery

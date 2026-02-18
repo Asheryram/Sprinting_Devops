@@ -3,7 +3,7 @@
 ## Sprint Goal
 Deliver the core MVP functionality: ability to create and view tasks, plus establish CI/CD pipeline and health monitoring.
 
-**Status:** ✅ COMPLETED
+**Status:** COMPLETED
 
 ---
 
@@ -21,7 +21,7 @@ Deliver the core MVP functionality: ability to create and view tasks, plus estab
 
 ## Completed User Stories
 
-### ✅ US1: Create Task (3 points)
+### US1: Create Task (3 points)
 **Acceptance Criteria Met:**
 - [x] POST /api/tasks endpoint exists
 - [x] Task must have a title (required)
@@ -51,7 +51,7 @@ curl -X POST http://localhost:3000/api/tasks \
 
 ---
 
-### ✅ US2: View Tasks (2 points)
+### US2: View Tasks (2 points)
 **Acceptance Criteria Met:**
 - [x] GET /api/tasks endpoint returns all tasks
 - [x] GET /api/tasks/:id returns a single task
@@ -65,7 +65,7 @@ curl http://localhost:3000/api/tasks
 
 ---
 
-### ✅ US5: Health Check (1 point)
+### US5: Health Check (1 point)
 **Acceptance Criteria Met:**
 - [x] GET /api/health endpoint exists
 - [x] Returns status "healthy" when API is running
@@ -102,7 +102,7 @@ curl http://localhost:3000/api/health
 
 ## CI/CD Pipeline Status
 
-✅ **Pipeline is operational**
+**Pipeline is operational**
 
 Pipeline runs on:
 - Every push to `main`
@@ -153,7 +153,3 @@ Coverage:    82.75%
 ![API Responses](screenshots/api-responses.png)
 
 ---
-
-## Stakeholder Feedback
-
-*To be gathered after demo*

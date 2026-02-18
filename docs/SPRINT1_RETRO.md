@@ -9,7 +9,7 @@
 
 ---
 
-## What Went Well ✅
+## What Went Well
 
 ### 1. CI/CD Pipeline Established Early
 - Set up GitHub Actions on day one
@@ -33,7 +33,7 @@
 
 ---
 
-## What Could Be Improved 🔧
+## What Could Be Improved
 
 ### 1. Error Handling
 - **Issue:** No global error handler for unexpected errors
@@ -64,7 +64,7 @@
 
 ## Team Mood
 
-😊 **Positive** - Sprint goals achieved, good foundation established.
+**Positive** - Sprint goals achieved, good foundation established.
 
 ---
 
@@ -92,7 +92,7 @@
 
 Based on this retrospective, we will:
 
-1. ✅ Add error handling before new features
-2. ✅ Add logging for better debugging
-3. ✅ Continue incremental commit approach
-4. ✅ Push each commit immediately for CI feedback
+1. Add error handling before new features
+2. Add logging for better debugging
+3. Continue incremental commit approach
+4. Push each commit immediately for CI feedback

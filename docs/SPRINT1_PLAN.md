@@ -67,12 +67,12 @@ Deliver the core MVP functionality: ability to create and view tasks, plus estab
 
 ## Sprint 1 Success Criteria
 
-1. ✅ CI/CD pipeline running on every push
-2. ✅ All tests passing
-3. ✅ 3 API endpoints working (create, view, health)
-4. ✅ API documentation complete
-5. ✅ Sprint review document created
-6. ✅ Retrospective completed
+1. CI/CD pipeline running on every push
+2. All tests passing
+3. 3 API endpoints working (create, view, health)
+4. API documentation complete
+5. Sprint review document created
+6. Retrospective completed
 
 ---
 
